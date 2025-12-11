@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Italiana", sans-serif;
+    font-weight: 200;
+}
+
+
+body {
+    background-color: #F6EBE1
+}
+
+header {
+    background-color: #7B3314;
+    height: 80px;
+}
+
+.pagina_inicial {
+    width: 90%;
+    max-width: 1440px;
+
+    display: flex;
+    left: 100px;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0px 20px;
+
+}
+h1 {
+    margin-top: 20px;
+}
+
+.colecao {
+    gap: 50px;
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    left: 100px;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    padding: 0 15px;
+    font-weight: 200px;
+    font-size: 25px;
+
+}
+
+/* BANNER */
+.banner_ruim {
+    margin: 0 0 150px 0;
+    background-image: url("../../assets/foto\ poster.png");
+    aspect-ratio: 3.2;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+
+
+}
+.cabecalho_vela img{
+margin-top: 150px;
+margin-left: 50%;
+width:500px;
+}
+
+.banner_ruim .cabecalho_vela {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.banner_ruim .cabecalho_vela span:first-child {
+    font-size: 140px;
+}
+
+.banner_ruim .cabecalho_vela span:last-child {
+    font-size: 50px;
+    margin-left: 150px;
+}
+
+.colecao_outono {
+
+    display: flex;
+    margin: 0 auto;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.colecao_outono img {
+    width: 45%;
+    aspect-ratio: 1.32;
+}
+
+
+.colecao_outono div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 45%;
+    max-width: 600px;
+
+}
+
+.colecao_outono h2 {
+    font-size: 49px;
+    font-family: "Baskervville", serif;
+    color: #712708;
+
+}
+
+.colecao_outono p {
+    font-size: 29px;
+    font-family: "Baskervville", serif;
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+
+.container_cabecalho svg {
+    height: 35px;
+    fill: #b0b0b0;
+    cursor: pointer;
+
+}
+
+
+.container_estacoes {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 115px;
+    flex-wrap: wrap;
+}
+
+.estacoes_col1,
+.estacoes_col2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    gap: 3%;
+}
+
+.estacoes_col1 link,
+.estacoes_col2 link {
+    width: 45%;
+    aspect-ratio: 0.47;
+
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: #712708;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .banner_ruim .cabecalho_vela span:first-child {
+        font-size: 100px;
+    }
+
+    .banner_ruim  span:last-child {
+        font-size: 36px;
+    }
+
+    .colecao_outono h2 {
+        font-size: 36px;
+    }
+
+    .colecao_outono p {
+        font-size: 22px;
+    }
+
+
+    .colecao_outono {
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1100px;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    .banner_ruim .cabecalho_vela span:first-child {
+        font-size: 80px;
+    }
+
+    .banner_ruim .cabecalho_vela span:last-child {
+        font-size: 28px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .colecao_outono {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .colecao_outono img{
+        margin-bottom: 50px;
+        width: 90%;
+        max-width: 310px;
+    }
+    
+    .colecao_outono div{
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .container_estacoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .estacoes_col1 {
+        margin-bottom: 50px;
+    }
+
+    .estacoes_col1,
+    .estacoes_col2 {
+        width: 90%;
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .colecao{
+        gap: 10px;
+        align-items: center;
+        display: flex;
+        position: absolute;
+        
+    }}
+ @media screen and (max-width: 999px) {
+   
+    
+    .cabecalho_vela img{
+
+        margin-top: 75px;
+        margin-left: 40%;
+        width:400px;
+    }
+}
+ @media screen and (max-width: 666px) {
+   
+    
+    .cabecalho_vela img{
+
+        margin-top: 75px;
+        margin-left: 40%;
+        width:200px;
+    }
+}

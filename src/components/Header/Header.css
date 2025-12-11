@@ -1,0 +1,100 @@
+header {
+    background-color: #7B3314;
+    /* height: 80px; */
+    align-items: center;
+
+}
+
+.container_cabecalho {
+    display: flex;
+}
+
+.me-auto {
+    width: 100%;
+    /* justify-content: space-between; */
+    padding: 0 3rem;
+}
+
+.conteudo-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic-navbar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagina_produtos {
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    color: #ffffff;
+    /* position: absolute; */
+    align-items: center;
+    margin: 0 100px;
+}
+
+.logo {
+    height: 30px;
+    width: 100px;
+}
+
+.colecao {
+
+    gap: 50px;
+    width: 50px;
+    max-width: 140px;
+    margin: 0 auto;
+    display: flex;
+    color: #ffffff;
+
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+    font-size: 25px;
+    z-index: 2;
+}
+
+.colecao p {
+    cursor: pointer;
+    font-family: "Bellota", system-ui;
+}
+
+.lupa_k {
+    width: 35px;
+    z-index: 3;
+}
+
+.box_busca {
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    margin: 0 10px;
+}
+
+.campo_busca {
+    width: 100%;
+    height: 42px;
+    border-radius: 10px;
+    border: solid 1px #cccccc;
+    padding-left: 5px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .me-auto {
+        align-items: center;
+    }
+
+    .logo {
+        margin: 1rem 0 1rem 0;
+    }
+
+    .colecao {
+        margin-bottom: 5px;
+    }
+}
