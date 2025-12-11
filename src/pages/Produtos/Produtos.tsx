@@ -14,7 +14,7 @@ import jacquin404 from '../../assets/img/ChatGPT Image 11 de dez. de 2025, 09_17
 
 export default function Produtos() {
 
-    const [velas, setVela] = useState<Vela[]>([]);
+    const [velas, setVelas] = useState<Vela[]>([]);
     const location = useLocation();
     const { categoria } = useParams<{ categoria: string }>();
 
@@ -24,26 +24,25 @@ export default function Produtos() {
     const fatchVela = async () => {
         try {
             const dados = await getVelas();
+            console.log("termo pesquisado: ", termo_pesquisado);
+
             if (categoria) {
                 const dados_filtrados = dados.filter(b =>
                     b.categorias.some(cat =>
                         cat.toLowerCase() === categoria.toLowerCase()));
-                setVela(dados_filtrados);
-            }
-            else if (termo_pesquisado) {
+                setVelas(dados_filtrados);
+            } else if (termo_pesquisado) {
                 const dados_filtrados = dados.filter(b =>
                     b.nome.toLowerCase()
-                        .includes(termo_pesquisado.toLowerCase()) ||
-                    b.descricao.toLowerCase()
                         .includes(termo_pesquisado.toLowerCase()) ||
                     b.categorias.some(cat => cat.toLowerCase()
                         .includes(termo_pesquisado
                             .toLowerCase()))
                 )
-                setVela(dados_filtrados)
+                setVelas(dados_filtrados)
             } else {
                 console.error("Nenhuma categoria ou termo de busca definidos.");
-                setVela([]);
+                setVelas([]);
             }
         } catch (error) {
             console.error("Erro ao executar getVela", error)
@@ -63,15 +62,17 @@ export default function Produtos() {
             <main>
 
                 <Carrossel />
-                <span className='Filtro'>
-                    {
-                        categoria
-                            ? categoria.charAt(0).toUpperCase() + categoria.slice(1).toLowerCase()
-                            : termo_pesquisado
-                                ? `Resultados para: ${termo_pesquisado}`
-                                : "Nenhum filtro aplicado"
-                    }
-                </span>
+                <div>
+                    <span className='Filtro'>
+                        {
+                            categoria
+                                ? categoria.charAt(0).toUpperCase() + categoria.slice(1).toLowerCase()
+                                : termo_pesquisado
+                                    ? `Resultados para: ${termo_pesquisado}`
+                                    : "Nenhum filtro aplicado"
+                        }
+                    </span>
+                </div>
 
                 <section className="cardis">
 

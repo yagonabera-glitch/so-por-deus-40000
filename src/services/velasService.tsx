@@ -13,7 +13,7 @@ export const getVelas = async (): Promise<Vela[]> => {
 
 export const deleteVela = async (idVela: string): Promise<void> =>{
     try{
-        await axios.delete(`http://localhost:3000/velas/${idVela}`)
+        await axios.delete(`http://localhost:3000/produtos/${idVela}`)
     }catch (error){
         console.error("Erro ao deleter o Vela: ", error);
         throw error;
