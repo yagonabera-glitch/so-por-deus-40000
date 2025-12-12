@@ -9,8 +9,7 @@
         "card_1.png"
       ],
       "id": "v001",
-      "preco": 59.90
-      
+      "preco": 59.9
     },
     {
       "nome": "Vela Perfumada Abóbora",
@@ -21,8 +20,7 @@
         "card_2.png"
       ],
       "id": "v002",
-      "preco": 64.90
-      
+      "preco": 64.9
     },
     {
       "nome": "Vela Perfumada Canela",
@@ -33,8 +31,7 @@
         "card_3.png"
       ],
       "id": "v003",
-      "preco": 54.90
-      
+      "preco": 54.9
     },
     {
       "nome": "Vela Perfumada Marshmallow",
@@ -45,8 +42,7 @@
         "card_4.png"
       ],
       "id": "v004",
-      "preco": 58.90
-      
+      "preco": 58.9
     },
     {
       "nome": "Vela Perfumada Sândalo",
@@ -57,8 +53,7 @@
         "vela-sandalo.png"
       ],
       "id": "v005",
-      "preco": 72.90
-      
+      "preco": 72.9
     },
     {
       "nome": "Vela Perfumada Cedro",
@@ -69,8 +64,7 @@
         "cedro_resized.png"
       ],
       "id": "v006",
-      "preco": 69.90
-      
+      "preco": 69.9
     },
     {
       "nome": "Vela Perfumada Âmbar",
@@ -81,8 +75,7 @@
         "ambar.png"
       ],
       "id": "v007",
-      "preco": 79.90
-      
+      "preco": 79.9
     },
     {
       "nome": "Vela Perfumada Café",
@@ -93,8 +86,7 @@
         "cafe.png"
       ],
       "id": "v008",
-      "preco": 62.90
-      
+      "preco": 62.9
     },
     {
       "nome": "Vela Perfumada Rosas",
@@ -105,8 +97,7 @@
         "rosas.png"
       ],
       "id": "v009",
-      "preco": 56.90
-      
+      "preco": 56.9
     },
     {
       "nome": "Vela Perfumada Orquídeas",
@@ -117,8 +108,7 @@
         "orquideas.png"
       ],
       "id": "v0010",
-      "preco": 68.90
-      
+      "preco": 68.9
     },
     {
       "nome": "Vela Perfumada Flor de Laranjeira",
@@ -129,8 +119,7 @@
         "laranjeira.png"
       ],
       "id": "v0011",
-      "preco": 59.90
-      
+      "preco": 59.9
     },
     {
       "nome": "Vela Perfumada Lavanda",
@@ -141,8 +130,7 @@
         "lavanda.png"
       ],
       "id": "v0012",
-      "preco": 64.90
-      
+      "preco": 64.9
     },
     {
       "nome": "Vela Perfumada Limão Siciliano",
@@ -153,8 +141,7 @@
         "limao.png"
       ],
       "id": "v0013",
-      "preco": 52.90
-      
+      "preco": 52.9
     },
     {
       "nome": "Vela Perfumada Jasmin",
@@ -165,8 +152,7 @@
         "jasmin.png"
       ],
       "id": "v0014",
-      "preco": 58.90
-      
+      "preco": 58.9
     },
     {
       "nome": "Vela Perfumada Coco",
@@ -177,8 +163,7 @@
         "vela-de-coco.png"
       ],
       "id": "v0015",
-      "preco": 55.90
-    
+      "preco": 55.9
     },
     {
       "nome": "Vela Perfumada Bergamota",
@@ -189,8 +174,16 @@
         "bergamota.png"
       ],
       "id": "v0016",
-      "preco": 57.90
-      
+      "preco": 57.9
+    },
+    {
+      "nome": "yago",
+      "preco": 9999,
+      "categorias": [
+        "outono"
+      ],
+      "imagens": [],
+      "id": "4KTNX1g"
     }
   ]
 }

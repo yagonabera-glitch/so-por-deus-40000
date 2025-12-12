@@ -33,6 +33,7 @@ export default function Cadastros() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         if (!nomeVela || !categoria || !preco) {
             exibirModalDeErroOuSucesso("Campos obrigatórios", "Preencha o nome, categorias e preço do bolo");
             return;
@@ -70,17 +71,17 @@ export default function Cadastros() {
 
 
 
-   const carregarImagem = (img: ChangeEvent<HTMLInputElement>) => {
-    const file = img.target.files?.[0];
-    if (file?.type.includes("image")) {
-      setImagem(file);
-      setBgImageInputColor("#5cb85c");
+    const carregarImagem = (img: ChangeEvent<HTMLInputElement>) => {
+        const file = img.target.files?.[0];
+        if (file?.type.includes("image")) {
+            setImagem(file);
+            setBgImageInputColor("#5cb85c");
+        }
+        else {
+            setImagem(undefined);
+            setBgImageInputColor("#ff2c2c");
+        }
     }
-    else {
-      setImagem(undefined);
-      setBgImageInputColor("#ff2c2c");
-    }
-  }
 
     const abrirModalParaConfirmarDelete = (id: string) => {
         setClicouNaLixeira(true);
@@ -140,91 +141,73 @@ export default function Cadastros() {
                 <section className="container_de_cadastro">
 
                     <h2 className="titulo">Cadastro</h2>
-                    <form className="container_cadastro">
+                    <form onSubmit={handleSubmit} className="container_cadastro box_cadastro">
 
-                        <div onSubmit={handleSubmit} className="box_cadastro">
-
-                            <div className="cadastro_coluna1">
-                                <div className="vela">
-                                    <label htmlFor="vela">Vela</label>
-                                    <input className='linhas_1e2'
-                                        type="text"
-                                        id="vela"
-                                        placeholder="Insira o nome do bolo"
-                                        value={nomeVela}
-                                        onChange={e => setNomeVela(e.target.value)} />
-                                </div>
-                                <div className="categoria">
-                                    <label htmlFor="categoria">Categoria</label>
-                                    <input
-                                        className='linhas_1e2'
-                                        type="text"
-                                        id="cat"
-                                        placeholder="outono, verão, primavera"
-                                        value={categoria}
-                                        onChange={c => setCategoria(c.target.value)}
-                                    />
-                                </div>
-
-                                <div className="categoria_img">
-
-                                    <div className="preco">
-                                        <label htmlFor="cat">Peso</label>
-                                        <NumericFormat
-                                            id="valor"
-                                            placeholder='Insira o preço (R$)'
-                                            value={preco ?? ""}
-                                            thousandSeparator="."
-                                            decimalSeparator=','
-                                            prefix='R$ '
-                                            decimalScale={2}
-                                            fixedDecimalScale
-                                            allowNegative={false}
-                                            onValueChange={(values) => {
-                                                setPreco(values.floatValue ?? undefined);
-                                            }}
-                                            inputMode='decimal'
-                                        />
-
-                                    </div>
-
-                                    <div className="img">
-                                        <label htmlFor="img">
-                                            <span>Imagem</span>
-                                            <div style={{ backgroundColor: bgImageInputColor }}>
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 448 512">                                            <path fill="currentColor"
-                                                        d="M232 344l0-316.7 106.3 106.3c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3l-120-120c-3.1-3.1-8.2-3.1-11.3 0l-120 120c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L216 27.3 216 344c0 4.4 3.6 8 8 8s8-3.6 8-8zm48-24l104 0c26.5 0 48 21.5 48 48l0 48c0 26.5-21.5 48-48 48L64 464c-26.5 0-48-21.5-48-48l0-48c0-26.5 21.5-48 48-48l104 0 0-16-104 0c-35.3 0-64 28.7-64 64l0 48c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-48c0-35.3-28.7-64-64-64l-104 0 0 16zm88 72a16 16 0 1 1 -32 0 16 16 0 1 1 32 0zm-16-32a32 32 0 1 0 0 64 32 32 0 1 0 0-64z" />
-                                                </svg>
-                                            </div>
-                                            <input type="file"
-                                                id="img"
-                                                alt="imagem_do_bolo"
-                                                accept="image/*"
-                                                onChange={carregarImagem}
-                                            />
-                                        </label>
-                                    </div>
-                                </div>
-
-
-
-
+                        <div className="cadastro_coluna1">
+                            <div className="vela">
+                                <label htmlFor="vela">Vela</label>
+                                <input className='linhas_1e2'
+                                    type="text"
+                                    id="vela"
+                                    placeholder="Insira o nome do bolo"
+                                    value={nomeVela}
+                                    onChange={e => setNomeVela(e.target.value)} />
+                            </div>
+                            <div className="categoria">
+                                <label htmlFor="categoria">Categoria</label>
+                                <input
+                                    className='linhas_1e2'
+                                    type="text"
+                                    id="cat"
+                                    placeholder="outono, verão, primavera"
+                                    value={categoria}
+                                    onChange={c => setCategoria(c.target.value)}
+                                />
                             </div>
 
+                            <div className="categoria_img">
 
+                                <div className="preco">
+                                    <label htmlFor="cat">Preço</label>
+                                    <NumericFormat
+                                        id="valor"
+                                        placeholder='Insira o preço (R$)'
+                                        value={preco ?? ""}
+                                        thousandSeparator="."
+                                        decimalSeparator=','
+                                        prefix='R$ '
+                                        decimalScale={2}
+                                        fixedDecimalScale
+                                        allowNegative={false}
+                                        onValueChange={(values) => {
+                                            setPreco(values.floatValue ?? undefined);
+                                        }}
+                                        inputMode='decimal'
+                                    />
+
+                                </div>
+
+                                <div className="img">
+                                    <label htmlFor="img">
+                                        <span>Imagem</span>
+                                        <div style={{ backgroundColor: bgImageInputColor }}>
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512">                                            <path fill="currentColor"
+                                                    d="M232 344l0-316.7 106.3 106.3c3.1 3.1 8.2 3.1 11.3 0s3.1-8.2 0-11.3l-120-120c-3.1-3.1-8.2-3.1-11.3 0l-120 120c-3.1 3.1-3.1 8.2 0 11.3s8.2 3.1 11.3 0L216 27.3 216 344c0 4.4 3.6 8 8 8s8-3.6 8-8zm48-24l104 0c26.5 0 48 21.5 48 48l0 48c0 26.5-21.5 48-48 48L64 464c-26.5 0-48-21.5-48-48l0-48c0-26.5 21.5-48 48-48l104 0 0-16-104 0c-35.3 0-64 28.7-64 64l0 48c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-48c0-35.3-28.7-64-64-64l-104 0 0 16zm88 72a16 16 0 1 1 -32 0 16 16 0 1 1 32 0zm-16-32a32 32 0 1 0 0 64 32 32 0 1 0 0-64z" />
+                                            </svg>
+                                        </div>
+                                        <input type="file"
+                                            id="img"
+                                            alt="imagem_do_bolo"
+                                            accept="image/*"
+                                            onChange={carregarImagem}
+                                        />
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-
-
-
-
-
-
+                        <button className='botaoSubmit botão' type='submit'>Cadastrar</button>
                     </form>
-                    <div className="botão">
-
-                          <button className='botaoSubmit' type='submit'>Cadastrar</button>
-                    </div>
                 </section>
 
                 <section>
@@ -250,7 +233,7 @@ export default function Cadastros() {
                                         <tr>
                                             <td data-cell="Vela: ">{b.nome}</td>
                                             <td data-cell="Categoria: ">{b.categorias.map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(", ")}</td>
-                                            <td data-cell="Peso: ">{formatoService.PrecoBR(b.preco)}</td>
+                                            <td data-cell="Preco: ">{formatoService.PrecoBR(b.preco)}</td>
                                             <td>
                                                 <svg onClick={() => abrirModalParaConfirmarDelete(b.id!)} xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 640 640">

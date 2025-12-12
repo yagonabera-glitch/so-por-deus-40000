@@ -11,7 +11,6 @@ import Header from '../../components/Header/Heade';
 import { useLocation, useParams } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer'
 import jacquin404 from '../../assets/img/ChatGPT Image 12 de dez. de 2025, 11_05_55.png';
-
 export default function Produtos() {
 
     const [velas, setVelas] = useState<Vela[]>([]);
@@ -62,7 +61,7 @@ export default function Produtos() {
             <main>
 
                 <Carrossel />
-                <div>
+                <div className='aliamento'>
                     <span className='Filtro'>
                         {
                             categoria

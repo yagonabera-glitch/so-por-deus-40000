@@ -15,7 +15,7 @@
     align-items: center;
 }
 .jacquin404 img{
-    height: 600px;
+    height: 500px;
 
 }
 .acessivel {
@@ -25,6 +25,9 @@
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
+}
+.aliamento{
+   text-align: center; 
 }
 
 

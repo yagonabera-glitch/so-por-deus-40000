@@ -165,9 +165,8 @@ header {
 }
 
 .box_cadastro {
-
     width: 90%;
-    max-width: 1440px;
+    max-width: 600px;
 
 }
 
@@ -186,7 +185,7 @@ header {
 .vela,
 .categoria,
 .img,
-.peso {
+.preco {
     display: flex;
     flex-direction: column;
     color: #000000;
@@ -225,7 +224,7 @@ header {
 }
 
 .preco {
-    width: 90%;
+    width: 70%;
 }
 
 .box_cadastro textarea {
