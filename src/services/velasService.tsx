@@ -24,12 +24,21 @@ export const enviarFotoParaAPI = async (file: File): Promise<string | undefined>
   formData.append("file", file);
 
   try {
-    const res = await axios.post("http://localhost:3000/upload", formData, {
+    const res = await axios.post("http://localhost:3000/produtos", formData, {
       headers: { "Content-Type": "multipart/form-data" }
     });
     return res.data.filename;
   } catch (error) {
     console.error("Erro no upload da imagem: ", error);
     return undefined;
+  }
+}
+
+export const postVela = async (vela: Vela): Promise<void> => {
+  try {
+    await axios.post("http://localhost:3000/produtos", vela);
+  } catch (error) {
+    console.error("Erro ao cadastrar o vela", error);
+    throw error;
   }
 }

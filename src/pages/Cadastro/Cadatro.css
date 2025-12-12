@@ -165,7 +165,7 @@ header {
 }
 
 .box_cadastro {
-  
+
     width: 90%;
     max-width: 1440px;
 
@@ -178,7 +178,7 @@ header {
 
 .cadastro_coluna1 {
     /* background-color: rgb(217, 255, 0); */
- 
+
     font-family: "Baskervville", serif;
 
 }
@@ -215,14 +215,16 @@ header {
 }
 
 .box_cadastro input[type="text"] {
-   
+    padding: 10px 100px;
     height: 40px;
     border-radius: 10px;
     align-items: center;
-
+    font-size: 24px;
+    box-shadow: 0 4px 4px 0 #000000;
+    cursor: pointer;
 }
 
-.peso {
+.preco {
     width: 90%;
 }
 
@@ -410,8 +412,7 @@ footer p {
         flex-direction: column;
     }
 
-    .cadastro_coluna1
-    {
+    .cadastro_coluna1 {
         width: 100%;
     }
 
@@ -480,7 +481,7 @@ footer p {
     }
 
     .menu_barras {
-        
+
 
         display: block;
     }

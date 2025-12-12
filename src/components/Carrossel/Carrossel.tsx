@@ -1,4 +1,4 @@
-import banner from '../../assets/img/Captura de tela 2025-09-25 133950.png'
+import banner from '../../assets/Group 9.png'
 
 export default function Carrossel() {
   return (

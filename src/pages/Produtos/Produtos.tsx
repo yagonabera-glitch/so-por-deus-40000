@@ -10,7 +10,7 @@ import Carrossel from '../../components/Carrossel/Carrossel';
 import Header from '../../components/Header/Heade';
 import { useLocation, useParams } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer'
-import jacquin404 from '../../assets/img/ChatGPT Image 11 de dez. de 2025, 09_17_15.png';
+import jacquin404 from '../../assets/img/ChatGPT Image 12 de dez. de 2025, 11_05_55.png';
 
 export default function Produtos() {
 
